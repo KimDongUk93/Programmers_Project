@@ -17,12 +17,12 @@ export default function ImageView({app, initalState, closeClick}){
         this.target.innerHTML = `
             <div class="content">
                 <div class="close-btn">
-                    닫기
+                    <img src="./assets/close.png" alt="팝업 닫기">
                 </div>
-                ${this.state.selectedFilePath ? `<img src="${IMAGE_PATH_PREFIX}${this.state.selectedFilePath}">`:""}
+                ${this.state ? `<img src="${IMAGE_PATH_PREFIX}${this.state}">`:""}
             </div>
         `;
-        this.target.style.display = this.state.selectedFilePath ? "flex" : "none";
+        this.target.style.display = this.state ? "flex" : "none";
 
         const closeBtn = this.target.querySelector('.close-btn');
 

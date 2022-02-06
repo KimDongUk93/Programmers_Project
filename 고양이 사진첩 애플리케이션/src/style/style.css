@@ -49,6 +49,12 @@ body {
     color: #666;
 }
 
+.breadcrumb .nav-item:hover {
+    color: #333;
+    font-weight: 700;
+    cursor: pointer;
+}
+
 .breadcrumb>span.divider {
     display: inline-block;
     font-size: 10px;
@@ -91,8 +97,6 @@ body {
 }
 
 /* 
-
-
 .list-container > li.node:nth-child(n + 5),
 .list-container > ul.list:nth-child(n + 5){
     margin-top: 20px;
@@ -102,7 +106,6 @@ body {
     width: 100%;
 }
 
-
 .Modal.ImageView {
     position: fixed;
     height: 100vh;
@@ -111,12 +114,34 @@ body {
     top: 0;
     align-items: center;
     justify-content: center;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
 }
 
-.Modal.ImageView > .content{
+.Modal.ImageView>.content {
     max-width: 500px;
+    position: relative
 }
 
-.Modal.ImageView > .content img{border-radius: 10px;}
+.Modal.ImageView>.content img {
+    border-radius: 10px;
+}
+
+
+.Modal.ImageView>.content .close-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.Modal.ImageView>.content .close-btn>img {
+    width: auto;
+}

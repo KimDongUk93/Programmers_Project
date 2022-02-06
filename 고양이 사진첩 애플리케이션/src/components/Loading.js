@@ -1,6 +1,3 @@
-// 네비게이션을 렌더링하는 컴포넌트
-// 첫번째 파라매터로 app을 받고 app에 네비게이션을 렌더링한다.
-// 두번째 파라매터로는 초기 state을 받는다.
 
 export default function Loading({app, initialState}){
     this.state = initialState;

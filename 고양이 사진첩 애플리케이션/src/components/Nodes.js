@@ -50,12 +50,12 @@ export default function Nodes({app, initialState, onClick, onBackClick}){
                 //만약 클릭한 node에 id가 없으면 뒤로가기 버튼으로 인지, 뒤로가기 이벤트 실행
                 if(!nodeId){
                     this.onBackClick();
-                }
-
-                const selectNode = this.state.nodes.find(node => node.id === nodeId);
+                } else {
+                    const selectNode = this.state.nodes.find(node => node.id === nodeId);
                 
-                if(selectNode){
-                    this.onClick(selectNode);
+                    if(selectNode){
+                        this.onClick(selectNode);
+                    }
                 }
             })
         })
