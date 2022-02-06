@@ -17,7 +17,7 @@ export const request = async(nodeId) => {
     }
 }
 
-export const api = {
+const api = {
     //Root 내용 전용 api
     fetchRoot(){
         return request();

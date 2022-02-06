@@ -19,8 +19,11 @@ export default function Breadcrumb({app, initialState}){
     //state.nodes를 이용하여 현재 위치를 랜더링한다.
     this.render = () =>{
         this.target.innerHTML = `
-            <div class="nav-item">root</div>
-            ${this.state.depth.map((node, index) => `
+            <div class="nav-item">메인화면</div>
+            ${this.state.map((node, index) => `
+                <span class="divider">
+                    ▶
+                </span>
                 <div class="nav-item" data-index="${index}">${node.name}</div>
             `).join("")}
         `

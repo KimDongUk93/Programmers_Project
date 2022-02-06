@@ -1,0 +1,122 @@
+@font-face {
+    font-family: 'SUIT-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Medium.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'SUIT-Medium';
+    list-style: none;
+    text-decoration: none;
+    letter-spacing: -0.3px;
+    line-height: 1.2;
+}
+
+body {
+    height: 100vh;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 30px 15px;
+}
+
+.loading {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    font-size: 20px;
+}
+
+.loading img {
+    width: 250px;
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    color: #666;
+}
+
+.breadcrumb>span.divider {
+    display: inline-block;
+    font-size: 10px;
+    color: #aaa;
+    margin: 0 8px;
+}
+
+.list-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #aaa;
+}
+
+.list-container li.node {
+    width: 25%;
+    text-align: center;
+    cursor: pointer;
+    padding: 5px;
+    word-break: keep-all;
+}
+
+.list-container .prev-btn {
+    flex-grow: 1;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.list-container ul.list {
+    display: flex;
+    flex-grow: 4;
+}
+
+.list-container li.node:hover,
+.list-container .prev-btn:hover {
+    background-color: #eee;
+}
+
+/* 
+
+
+.list-container > li.node:nth-child(n + 5),
+.list-container > ul.list:nth-child(n + 5){
+    margin-top: 20px;
+} */
+
+.ImageView img {
+    width: 100%;
+}
+
+
+.Modal.ImageView {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    left: 0;
+    top: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.5);
+    padding: 20px;
+}
+
+.Modal.ImageView > .content{
+    max-width: 500px;
+}
+
+.Modal.ImageView > .content img{border-radius: 10px;}
