@@ -1,0 +1,80 @@
+@font-face {
+    font-family: 'SUIT-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Medium.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'SUIT-Medium';
+    list-style: none;
+    text-decoration: none;
+    letter-spacing: -0.3px;
+    line-height: 1.2;
+}
+
+body {
+    height: auto;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 30px 15px;
+}
+
+.form-container{
+    margin-top: 15px;
+}
+
+.form-container > input {
+    height: 35px;
+    width: 200px;
+    padding: 0 10px;
+}
+
+.form-container > button{
+    height: 35px;
+    background-color: teal;
+    border: none;
+    border-radius: 3px;
+    width: 50px;
+    color: #fff;
+    display: inline-block;
+}
+
+.list-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.list-container .list{
+    width: calc(50% - 10px);
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.list-container .list .img-wrap{
+    position: relative;
+    padding-top: 60%;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.list-container .list img {
+    width: 115%;
+    position: absolute;
+    transform: translate(-50%, 0%);
+    top: 0%;
+    left: 50%;
+}
+
+.list-container .list .name{
+    margin-top: 10px;
+    word-break: keep-all;
+    text-align: center;
+}
