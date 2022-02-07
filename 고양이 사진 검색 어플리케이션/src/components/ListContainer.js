@@ -14,7 +14,6 @@ export default function ListContainer({ app, data, onClick }) {
     //-----------------컴포넌트 관리 구역
     this.render = () => {
         const catList = this.state;
-        console.log(catList.length)
         if (catList.length > 0) {
             const html = catList.map(cat => {
                 return `
@@ -34,8 +33,7 @@ export default function ListContainer({ app, data, onClick }) {
                 <img src="./asset/no-data.png" alt="">
                 <p>고양이를 찾을 수 없습니다ㅠ</p>
             </li>
-            `
-            ;
+            `;
 
             this.dom.innerHTML = html;
         }

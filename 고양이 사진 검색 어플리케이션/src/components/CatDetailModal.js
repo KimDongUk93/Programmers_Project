@@ -35,5 +35,8 @@ export default function CatDetailModal({ app, data, closeClick }) {
         const closeBtn = this.dom.querySelector('.close');
 
         closeBtn.addEventListener('click', this.closeClick)
+        document.addEventListener('keydown', (e)=>{
+            if(e.keyCode === 27) this.closeClick()
+        })
     }
 }
