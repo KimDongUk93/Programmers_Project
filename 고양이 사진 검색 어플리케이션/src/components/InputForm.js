@@ -1,8 +1,7 @@
 export default function InputForm({app, onSearch}) {
-    this.onSearch = onSearch;
-
     //-----------------상태관리 구역
-
+    this.onSearch = onSearch;
+    
     //-----------------컴포넌트 관리 구역
     this.render = () => {
         this.dom = document.createElement('section');//최상단 요소

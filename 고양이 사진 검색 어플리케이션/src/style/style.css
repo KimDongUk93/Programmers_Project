@@ -29,7 +29,7 @@ body {
 
 .form-container > input {
     height: 35px;
-    width: 200px;
+    width: 250px;
     padding: 0 10px;
 }
 
@@ -38,9 +38,29 @@ body {
     background-color: teal;
     border: none;
     border-radius: 3px;
-    width: 50px;
+    width: 70px;
     color: #fff;
     display: inline-block;
+    cursor: pointer;
+}
+
+.searchTag-container{
+    background-color: rgb(234, 245, 245);
+    height: 40px;
+    margin-top: 10px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.searchTag-container > .tag{
+    margin-right: 10px;
+    background-color: rgb(89, 172, 172);
+    color: #fff;
+    border-radius: 50px;
+    padding: 3px 12px 5px;
+    cursor: pointer;
 }
 
 .list-container {
@@ -77,4 +97,86 @@ body {
     margin-top: 10px;
     word-break: keep-all;
     text-align: center;
+}
+
+.list-container .no-image{
+    text-align: center;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.list-container .no-image img{
+    width: 150px;
+}
+
+.list-container .no-image p{
+    margin-top: 15px;
+    font-size: 18px;
+    color: #555;
+}
+
+.cat-detail.modal {
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    
+}
+
+.cat-detail.modal .inner{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 85%;
+    max-width: 550px;
+    background-color: #fff;
+    padding: 50px 15px;
+    border-radius: 5px;
+    word-break: keep-all;
+}
+
+.cat-detail.modal .name{
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #222;
+    margin-top: 10px;
+}
+
+.cat-detail.modal .temp,
+.cat-detail.modal .origin{
+    color: #333;
+}
+
+.cat-detail.modal .origin{
+    padding-top: 15px;
+    margin-top: 15px;
+    border-top: 1px solid #ddd;
+}
+
+.cat-detail.modal .temp{
+    margin-top: 5px;
+}
+
+.cat-detail.modal img{
+    width: 100%;
+}
+
+.cat-detail.modal .close {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: #fff;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
