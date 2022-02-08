@@ -1,5 +1,7 @@
-export default function SearchTag({app, data}) {
+export default function SearchTag({app, data, onClick, onDelete}) {
     this.state = data;
+    this.onClick = onClick;
+    this.onDelete = onDelete;
     this.dom = document.createElement('ul');//최상단 요소
     this.dom.className = "searchTag-container"; 
     app.appendChild(this.dom);
@@ -11,15 +13,40 @@ export default function SearchTag({app, data}) {
     }
 
     this.render = () => {
-        const tagList = this.state;
+        let tagList = this.state;
+
+        if(tagList.length > 5) tagList.shift();
 
         if(tagList){
             const makeTagList = tagList.map((tag, index) => {
-                return `<li class="tag">${tag}</li>`
+                return `
+                    <li class="tag">
+                        <p class="text">${tag}</p>
+                        <span class="close">x</span>
+                    </li>
+                `
             }).join("");
 
             const html = makeTagList;
             this.dom.innerHTML = html;
+
+            const listsBtns = this.dom.querySelectorAll('.text');
+            const closeBtns = this.dom.querySelectorAll('.close');
+
+            listsBtns.forEach(listBtn => {
+                listBtn.addEventListener('click', (e)=> {
+                    const tagSearchText = e.target.innerHTML;
+
+                    this.onClick(tagSearchText)
+                })
+            });
+
+            closeBtns.forEach(closeBtn => {
+                closeBtn.addEventListener('click', (e)=> {
+                    const tagSearchText = e.target.parentNode.querySelector('.text').innerHTML;
+                    this.onDelete(tagSearchText)
+                })
+            });
         }
     }
 }

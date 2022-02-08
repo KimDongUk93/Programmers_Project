@@ -46,28 +46,39 @@ body {
 
 .searchTag-container{
     background-color: rgb(234, 245, 245);
-    height: 40px;
+    padding: 10px;
     margin-top: 10px;
     border-radius: 3px;
     display: flex;
     align-items: center;
-    padding: 0 10px;
+    flex-wrap: wrap;
 }
 
 .searchTag-container > .tag{
-    margin-right: 10px;
     background-color: rgb(89, 172, 172);
     color: #fff;
     border-radius: 50px;
     padding: 3px 12px 5px;
     cursor: pointer;
+    display: flex;
+    margin: 5px 0 0 10px;
+    text-transform: lowercase;
+}
+
+.searchTag-container > .tag:hover{
+    background-color: rgb(50, 124, 124);
+}
+
+.searchTag-container > .tag .close{
+    display: inline-block;
+    margin-left: 10px;
 }
 
 .list-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 40px;
+    margin-top: 30px;
     padding-top: 20px;
     border-top: 1px solid #ddd;
 }
@@ -76,13 +87,18 @@ body {
     width: calc(50% - 10px);
     margin-top: 20px;
     cursor: pointer;
+    
 }
 
 .list-container .list .img-wrap{
     position: relative;
     padding-top: 60%;
-    overflow: hidden;
     border-radius: 5px;
+    overflow: hidden;
+}
+
+.list-container .list .img-wrap:hover img{
+    width: 120%;
 }
 
 .list-container .list img {
@@ -138,6 +154,12 @@ body {
     padding: 50px 15px;
     border-radius: 5px;
     word-break: keep-all;
+}
+
+.searchTitle-container{
+    margin-top: 30px;
+    text-align: center;
+    color: #333;
 }
 
 .cat-detail.modal .name{

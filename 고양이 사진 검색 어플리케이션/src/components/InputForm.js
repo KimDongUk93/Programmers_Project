@@ -16,15 +16,22 @@ export default function InputForm({app, onSearch}) {
         //-----------------함수 관리 구역
         const serchButton = this.dom.querySelector('button');
         const serchInput = this.dom.querySelector('input');
+
         serchInput.focus()
 
         serchButton.addEventListener('click', ()=> {
             const searchText = serchInput.value;
 
-            sessionStorage.setItem("tag", searchText)
-
             this.onSearch(searchText)
         })
+
+        serchInput.addEventListener('keypress', (e) => {
+            const searchText = serchInput.value;
+            
+            if (e.key === 'Enter') {
+                this.onSearch(searchText)
+            }
+        });
     }
 
     this.render()
